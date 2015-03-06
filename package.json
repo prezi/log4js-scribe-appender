@@ -8,5 +8,12 @@
   },
   "engines": {
     "node": "0.10.35"
+  },
+  "devDependencies": {
+    "mocha": "^2.1.0",
+    "sinon": "^1.13.0"
+  },
+  "scripts": {
+    "test": "mocha"
   }
 }
