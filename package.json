@@ -1,13 +1,22 @@
 {
   "name": "log4js-scribe-appender",
   "version": "0.0.1",
+  "description": "A custom appender for log4js capable of sending logs to a scribe server",
+  "keywords": ["scribe", "log4js", "logging"],
+  "homepage": "https://github.com/prezi/log4js-scribe-appender",
+  "bugs": "https://github.com/prezi/log4js-scribe-appender/issues",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prezi/log4js-scribe-appender.git"
+  },
   "main": "index.js",
   "dependencies": {
     "log4js": "0.6.22",
     "scribe": "~0.0.9"
   },
   "engines": {
-    "node": "0.10.35"
+    "node": ">= 0.8"
   },
   "devDependencies": {
     "mocha": "^2.1.0",
