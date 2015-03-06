@@ -47,7 +47,7 @@ function scribeAppender(config, layout) {
         } else if (storedMessages.length < STORED_MESSAGES_LIMIT) {
             storedMessages.push(msg);
         }
-    }
+    };
 }
 
 function configure(config) {
