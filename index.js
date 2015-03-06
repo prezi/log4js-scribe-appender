@@ -1,3 +1,4 @@
+/* global require, console, exports */
 var layouts = require('log4js/lib/layouts.js'),
     scribe = require('scribe'),
     os = require('os'),
@@ -10,11 +11,12 @@ var layouts = require('log4js/lib/layouts.js'),
  * @param layout function that takes a log event and returns a string
  */
 function scribeAppender(config, layout) {
+    'use strict';
     config = config || {};
     config.host = config.host || 'localhost';
     config.port = config.port || 1463;
 
-    this.scribeCategory = config.scribeCategory || 'log4js-node';
+    var scribeCategory = config.scribeCategory || 'log4js-node';
 
     var client = new scribe.Scribe(config.host, config.port, {autoReconnect:true});
     var isReady = false;
@@ -28,7 +30,7 @@ function scribeAppender(config, layout) {
         }
         while (storedMessages.length) {
             var msg = storedMessages.shift();
-            client.send(self.scribeCategory, msg);
+            client.send(scribeCategory, msg);
         }
         isReady = true;
     });
@@ -37,13 +39,14 @@ function scribeAppender(config, layout) {
         console.log("Couldn't connect to scribe: ", err.code);
     });
 
-    if(!layout) layout = passThrough;
+    if(!layout) {
+        layout = passThrough;
+    }
 
-    var self = this;
     return function(loggingEvent) {
         var msg = layout(loggingEvent);
         if (isReady) {
-            client.send(self.scribeCategory, msg);
+            client.send(scribeCategory, msg);
         } else if (storedMessages.length < STORED_MESSAGES_LIMIT) {
             storedMessages.push(msg);
         }
@@ -51,6 +54,7 @@ function scribeAppender(config, layout) {
 }
 
 function configure(config) {
+    "use strict";
     var layout;
     if (config.layout) {
         layout = layouts.layout(config.layout.type, config.layout);
