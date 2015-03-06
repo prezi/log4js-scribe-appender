@@ -1,6 +1,6 @@
 {
   "name": "log4js-scribe-appender",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A custom appender for log4js capable of sending logs to a scribe server",
   "keywords": ["scribe", "log4js", "logging"],
   "homepage": "https://github.com/prezi/log4js-scribe-appender",

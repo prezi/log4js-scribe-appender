@@ -3,7 +3,7 @@
     "use strict";
     
     var layouts = require('log4js/lib/layouts.js'),
-        scribeModule = require('scribe'),
+        scribe = require('scribe'),
         os = require('os'),
         passThrough = layouts.messagePassThroughLayout;
 
@@ -64,8 +64,7 @@
         return null;
     }
 
-    function configure(_config, _scribe) {
-        var scribe = _scribe || scribeModule;
+    function configure(_config) {
         var config = withDefaults(_config);
         var client = new scribe.Scribe(config.host, config.port, {autoReconnect:true});
         var layout = makeLayout(config);
