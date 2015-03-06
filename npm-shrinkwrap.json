@@ -1,0 +1,62 @@
+{
+  "name": "log4js-scribe-appender",
+  "version": "0.0.1",
+  "dependencies": {
+    "log4js": {
+      "version": "0.6.22",
+      "from": "log4js@0.6.22",
+      "resolved": "https://registry.npmjs.org/log4js/-/log4js-0.6.22.tgz",
+      "dependencies": {
+        "async": {
+          "version": "0.2.10",
+          "from": "async@>=0.2.0 <0.3.0",
+          "resolved": "https://registry.npmjs.org/async/-/async-0.2.10.tgz"
+        },
+        "readable-stream": {
+          "version": "1.0.33",
+          "from": "readable-stream@>=1.0.2 <1.1.0",
+          "resolved": "https://registry.npmjs.org/readable-stream/-/readable-stream-1.0.33.tgz",
+          "dependencies": {
+            "core-util-is": {
+              "version": "1.0.1",
+              "from": "core-util-is@>=1.0.0 <1.1.0",
+              "resolved": "https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.1.tgz"
+            },
+            "isarray": {
+              "version": "0.0.1",
+              "from": "isarray@0.0.1",
+              "resolved": "https://registry.npmjs.org/isarray/-/isarray-0.0.1.tgz"
+            },
+            "string_decoder": {
+              "version": "0.10.31",
+              "from": "string_decoder@>=0.10.0 <0.11.0",
+              "resolved": "https://registry.npmjs.org/string_decoder/-/string_decoder-0.10.31.tgz"
+            },
+            "inherits": {
+              "version": "2.0.1",
+              "from": "inherits@>=2.0.1 <2.1.0",
+              "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.1.tgz"
+            }
+          }
+        },
+        "semver": {
+          "version": "1.1.4",
+          "from": "semver@>=1.1.4 <1.2.0",
+          "resolved": "https://registry.npmjs.org/semver/-/semver-1.1.4.tgz"
+        }
+      }
+    },
+    "scribe": {
+      "version": "0.0.9",
+      "from": "scribe@>=0.0.9 <0.1.0",
+      "resolved": "https://registry.npmjs.org/scribe/-/scribe-0.0.9.tgz",
+      "dependencies": {
+        "thrift": {
+          "version": "0.7.0",
+          "from": "thrift@0.7.0",
+          "resolved": "https://registry.npmjs.org/thrift/-/thrift-0.7.0.tgz"
+        }
+      }
+    }
+  }
+}
