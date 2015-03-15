@@ -2,9 +2,8 @@
 (function () {
     "use strict";
     var assert = require("assert");
-    var sinon = require("sinon");
     var scribe = require("scribe");
-    
+
     var log4jScribeAppender = require("./index");
 
     describe('withDefaults', function(){
@@ -14,7 +13,7 @@
             assert.equal(config.port, 1463);
             assert.equal(config.scribeCategory, 'log4js-node');
         });
-        
+
         it('doesn\'t override passed in values', function() {
             var _config = { host: 'foo', port: 42, scribeCategory: 'bar' };
             var config = log4jScribeAppender.withDefaults(_config);
