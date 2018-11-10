@@ -1,6 +1,6 @@
 {
   "name": "log4js-scribe-appender",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A custom appender for log4js capable of sending logs to a scribe server",
   "keywords": [
     "scribe",
@@ -16,14 +16,14 @@
   },
   "main": "index.js",
   "dependencies": {
-    "log4js": "0.6.22",
+    "log4js": "^3.0.6",
     "scribe": "~0.0.9"
   },
   "engines": {
-    "node": ">= 0.8"
+    "node": "11.1.0"
   },
   "devDependencies": {
-    "mocha": "^2.1.0"
+    "mocha": "^5.2.0"
   },
   "scripts": {
     "test": "mocha"
